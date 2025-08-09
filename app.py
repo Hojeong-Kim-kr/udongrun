@@ -46,7 +46,7 @@ page = raw[0] if isinstance(raw, list) else raw
 
 def header():
     st.markdown("### 🏃 우동런 · Our Neighborhood Running Club 세종")
-    st.caption("토요일 08:00 @ 세종 호수공원")
+    st.caption("매주 토요일 08:00 @ 세종 호수공원")
 
 # ---------- Public ----------
 def public_page():
