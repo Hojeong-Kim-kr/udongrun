@@ -16,15 +16,18 @@ def get_gsheet():
     )
     gc = gspread.authorize(creds)
     sh = gc.open_by_url(st.secrets["SHEET_URL"])
-    # 1번째 시트를 사용(없으면 생성)
+
+    # 👉 'rsvps' 시트로 강제 연결 (없으면 생성)
     try:
-        ws = sh.(worksheet("rsvps")
+        ws = sh.worksheet("rsvps")
     except gspread.exceptions.WorksheetNotFound:
         ws = sh.add_worksheet(title="rsvps", rows=1000, cols=10)
+
     # 헤더 없으면 추가
     headers = ws.row_values(1)
     if not headers:
         ws.insert_row(["timestamp", "name", "email", "pace"], 1)
+
     return ws
 
 def append_rsvp(name, email, pace):
