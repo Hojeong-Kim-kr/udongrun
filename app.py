@@ -51,9 +51,9 @@ def header():
 # ---------- Public ----------
 def public_page():
     header()
-    st.subheader("퍼블릭 페이지")
+    st.subheader("함께 달려요")
 
-    st.write("아래 폼으로 RSVP 제출하세요.")
+    st.write("아래 폼으로 참가예약 하세요.")
     with st.form("rsvp_form", clear_on_submit=True):
         name = st.text_input("이름")
         email = st.text_input("이메일")
