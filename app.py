@@ -18,9 +18,9 @@ def get_gsheet():
     sh = gc.open_by_url(st.secrets["SHEET_URL"])
     # 1번째 시트를 사용(없으면 생성)
     try:
-        ws = sh.sheet1
-    except gspread.exceptions.APIError:
-        ws = sh.add_worksheet(title="RSVP", rows=1000, cols=10)
+        ws = sh.(worksheet("rsvps")
+    except gspread.exceptions.WorksheetNotFound:
+        ws = sh.add_worksheet(title="rsvps", rows=1000, cols=10)
     # 헤더 없으면 추가
     headers = ws.row_values(1)
     if not headers:
