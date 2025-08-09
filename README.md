@@ -1,2 +1,2 @@
 # udongrun
-우동런-우리동네 런 클럽
+우동런-Our Neighborhood Run Club
