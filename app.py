@@ -54,7 +54,7 @@ def public_page():
     with st.form("rsvp_form", clear_on_submit=True):
         name = st.text_input("이름")
         email = st.text_input("이메일")
-        pace = st.text_input("예상 페이스 (예: 6.00"/km)")
+        pace = st.text_input("예상 페이스 (예: 6.00\"/km)")
         submitted = st.form_submit_button("제출")
         if submitted:
             if not name or not email:
