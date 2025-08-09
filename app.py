@@ -1,12 +1,12 @@
 import streamlit as st
 
-st.set_page_config(page_title="파크런 세종", page_icon="🏃")
+st.set_page_config(page_title="우동런-우리동네 런 클럽 세종", page_icon="🏃")
 
 params = st.query_params
 page = params.get("page", "public")  # public 또는 admin
 
 def header():
-    st.markdown("### 🏃 파크런 세종")
+    st.markdown("### 🏃 우동런-우리동네 런 클럽 세종")
     st.caption("토요일 08:00 @ 세종 호수공원")
 
 def public_page():
