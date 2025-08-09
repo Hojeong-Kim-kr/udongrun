@@ -1,13 +1,13 @@
 import streamlit as st
 
-st.set_page_config(page_title="파크런 세종", page_icon="🏃")
+st.set_page_config(page_title="우동런 - Our Neighborhood Running Club 세종", page_icon="🏃")
 
 params = st.query_params
 raw = params.get("page", "public")
 page = raw[0] if isinstance(raw, list) else raw
 
 def header():
-    st.markdown("### 🏃 파크런 세종")
+    st.markdown("### 🏃 우동런 - Our Neighborhood Running Club 세종")
     st.caption("토요일 08:00 @ 세종 호수공원")
 
 def public_page():
@@ -18,7 +18,7 @@ def public_page():
     with st.form("rsvp_form", clear_on_submit=True):
         name = st.text_input("이름")
         email = st.text_input("이메일")
-        pace = st.text_input("예상 페이스 (예: 6'00"/km)")
+        pace = st.text_input('예상 페이스 (예: 6\'00"/km)')
         submitted = st.form_submit_button("제출")
         if submitted:
             if not name or not email:
